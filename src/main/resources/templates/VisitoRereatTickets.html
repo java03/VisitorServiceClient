@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Visitor RereatTickets</title>
+<!-- Bootstrap -->
+    <link href="#" th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+	<script type="text/javascript" src="#" th:src="@{/js/jquery.min.js}"></script>
+	<script type="text/javascript" src="#" th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" src="#" th:src="@{/js/main.js}"></script>
+</head>
+<body>
+<!-- 标题栏  -->
+	<div th:replace="~{component/titleBar::titleBar('emp',@{/},${orderIndex},${orderFlag},null)}"></div>
+
+	<!-- 容器-->
+	<div class="container">
+		<div class="row"></div>
+		<!-- 菜单 -->
+		<div class="col-sm-3 col-md-3" th:include="~{component/titleBar::mainMenu('emp')}"></div>
+  		<!-- 内容 -->
+  		<div class="col-sm-8  col-md-7 ">
+			<table class="table table-striped">
+				<thead>
+					<tr id="tabTitle">
+						<td>初始站点</td><td>目的站点</td><td>线路</td><td>全程票价</td><td>出发时间</td><td>返程时间</td><td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td >西安</td>
+						<td >咸阳</td>
+						<td >西咸高速</td>
+						<td >35</td>
+						<td >2020/11/25</td>
+						<td >2020/11/28</td>
+						<td ><a href="" >退订</a></td>
+					</tr>
+				</tbody>
+				</table>
+		</div>
+	</div>
+</body>
+</html>
